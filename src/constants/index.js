@@ -41,37 +41,48 @@ const counterItems = [
 
 const logoIconsList = [
   {
+    name: "Shopify",
     imgPath: "/images/logos/company-logo-1.png",
   },
   {
+    name: "Microsoft",
     imgPath: "/images/logos/company-logo-2.png",
   },
   {
-    imgPath: "/images/logos/company-logo-3.png",
-  },
-  {
+    name: "Docker",
     imgPath: "/images/logos/company-logo-4.png",
   },
   {
+    name: "Hostinger",
     imgPath: "/images/logos/company-logo-5.png",
   },
   {
-    imgPath: "/images/logos/company-logo-6.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-7.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
-  {
+    name: "Vercel",
     imgPath: "/images/logos/company-logo-9.png",
   },
   {
-    imgPath: "/images/logos/company-logo-10.png",
+    name: "Loom",
+    imgPath: "/images/logos/company-logo-11.png",
   },
   {
-    imgPath: "/images/logos/company-logo-11.png",
+    name: "AWS",
+    imgPath: "/images/logos/company-logo-12.png",
+  },
+  {
+    name: "Render",
+    imgPath: "/images/logos/company-logo-13.png",
+  },
+  {
+    name: "MongoDB",
+    imgPath: "/images/logos/company-logo-14.png",
+  },
+  {
+    name: "Supabase",
+    imgPath: "/images/logos/company-logo-15.png",
+  },
+  {
+    name: "Cloudflare",
+    imgPath: "/images/logos/company-logo-16.png",
   },
 ];
 
