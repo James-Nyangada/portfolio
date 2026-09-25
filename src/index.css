@@ -152,6 +152,34 @@ section {
         }
       }
     }
+
+    .mobile-menu-btn {
+      @apply lg:hidden flex flex-col justify-center items-center gap-1.5 size-10 cursor-pointer shrink-0;
+
+      span {
+        @apply block w-6 h-0.5 bg-white transition-all duration-300;
+      }
+    }
+
+    nav.mobile {
+      @apply lg:hidden absolute top-full left-0 w-full px-5 md:px-20 mt-3;
+
+      ul {
+        @apply flex flex-col bg-black-100 border border-black-50 rounded-xl overflow-hidden max-h-0 opacity-0 pointer-events-none transition-all duration-300;
+      }
+
+      &.open ul {
+        @apply max-h-[500px] opacity-100 pointer-events-auto;
+      }
+
+      li {
+        @apply border-b border-black-50 last:border-b-0;
+
+        a {
+          @apply block px-6 py-4 text-white-50 hover:text-white hover:bg-black-200 transition-colors duration-300;
+        }
+      }
+    }
   }
 
   .app-showcase {
@@ -294,6 +322,82 @@ section {
       img {
         @apply inline-block;
       }
+    }
+  }
+
+  .pricing-panel {
+    animation: pricingFade 200ms ease-out;
+  }
+
+  .pricing-tabs {
+    @apply flex items-center gap-1 bg-black-200 rounded-full p-1 w-fit max-w-full mx-auto overflow-x-auto;
+  }
+
+  .pricing-tab {
+    @apply px-5 py-2 rounded-full text-sm md:text-base text-white-50 font-medium whitespace-nowrap transition-colors duration-300 cursor-pointer;
+
+    &:focus-visible {
+      @apply outline outline-2 outline-white-50 outline-offset-2;
+    }
+
+    &.active {
+      @apply bg-white-50 text-black-100;
+    }
+  }
+
+  .pricing-card {
+    @apply border border-black-50 bg-black-100 rounded-xl p-8 flex flex-col gap-6 h-full transition-transform duration-300 hover:-translate-y-1 relative;
+
+    &.popular {
+      @apply border-white-50;
+    }
+  }
+
+  .pricing-badge {
+    @apply absolute -top-3 left-8 bg-white-50 text-black-100 text-xs font-semibold px-3 py-1 rounded-full w-fit;
+  }
+
+  .pricing-price {
+    @apply flex items-baseline gap-2;
+
+    .from {
+      @apply text-white-50 text-sm;
+    }
+
+    .amount {
+      @apply text-white text-3xl md:text-4xl font-semibold;
+    }
+
+    .period {
+      @apply text-white-50 text-sm;
+    }
+  }
+
+  .pricing-divider {
+    @apply w-full h-px bg-black-50;
+  }
+
+  .pricing-included {
+    @apply flex flex-col gap-3 text-white-50 text-sm md:text-base flex-1;
+
+    li {
+      @apply flex items-start gap-2;
+    }
+  }
+
+  .pricing-bar {
+    @apply border border-black-50 bg-black-100 rounded-xl p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5;
+  }
+
+  .pricing-footer-note {
+    @apply text-white-50 text-xs md:text-sm text-center mt-10;
+  }
+
+  .pricing-secondary-btn {
+    @apply border border-white-50 text-white-50 px-6 py-3 rounded-lg text-sm md:text-base font-semibold text-center hover:bg-white-50 hover:text-black-100 transition-colors duration-300 cursor-pointer;
+
+    &:focus-visible {
+      @apply outline outline-2 outline-white-50 outline-offset-2;
     }
   }
 
@@ -469,4 +573,13 @@ section {
 
 .card:hover::before {
   opacity: 1;
+}
+
+@keyframes pricingFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

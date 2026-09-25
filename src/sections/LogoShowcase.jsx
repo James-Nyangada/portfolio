@@ -10,6 +10,9 @@ const LogoIcon = ({ icon }) => {
 
 const LogoShowcase = () => (
   <div className="md:my-20 my-10 relative">
+    <p className="text-white-50 text-sm text-center mb-6">
+      Tools & platforms I work with
+    </p>
     <div className="gradient-edge" />
     <div className="gradient-edge" />
 

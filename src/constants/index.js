@@ -15,6 +15,10 @@ const navLinks = [
     name: "Testimonials",
     link: "#testimonials",
   },
+  {
+    name: "Pricing",
+    link: "#pricing",
+  },
 ];
 
 const words = [
@@ -29,9 +33,9 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 4, suffix: "+", label: "Years of Experience" },
-  { value: 10, suffix: "+", label: "Satisfied Clients" },
-  { value: 80, suffix: "+", label: "Completed Projects" },
+  { value: 3, suffix: "", label: "Years Coding" },
+  { value: 15, suffix: "", label: "Satisfied Clients" },
+  { value: 15, suffix: "", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
@@ -240,6 +244,173 @@ const testimonials = [
   },
 ];
 
+const whatsappNumber = "254791433046";
+
+const pricingTabs = [
+  { id: "websites", label: "Websites" },
+  { id: "qa", label: "QA Testing" },
+  { id: "support", label: "Support & Add-ons" },
+];
+
+const pricingWebsitePackages = [
+  {
+    name: "Starter Website",
+    tagline:
+      "Small businesses and organisations that need a clean online presence",
+    price: "50,000",
+    period: "",
+    hasFrom: true,
+    included: [
+      "Up to 5 pages, mobile-responsive",
+      "Contact form and WhatsApp link",
+      "Basic SEO and Google Analytics",
+    ],
+    delivery: "1–2 weeks",
+    liveNames: [{ name: "Holygoats", href: "https://holygoats.org/" }],
+    buttonText: "Get a quote",
+    buttonStyle: "secondary",
+    popular: false,
+  },
+  {
+    name: "Business Website",
+    tagline: "Firms that want a premium site they can update themselves",
+    price: "90,000",
+    period: "",
+    hasFrom: true,
+    included: [
+      "Up to 10 pages, custom design",
+      "Admin dashboard for content and blog",
+      "SEO, analytics and business email setup",
+      "2 revision rounds",
+      "30 days of support",
+    ],
+    delivery: "3–4 weeks",
+    liveNames: [{ name: "Borderless Afro Legal Hub", href: "https://www.borderlessafrolegalhub.com/" }, { name: "Washlab Consult", href: "https://washlab.org/" }],
+    buttonText: "Get a quote",
+    buttonStyle: "primary",
+    popular: true,
+  },
+  {
+    name: "Booking & E-commerce",
+    tagline: "Businesses that sell or take bookings online",
+    price: "180,000",
+    period: "",
+    hasFrom: true,
+    included: [
+      "Everything in Business",
+      "Booking engine or online store",
+      "M-Pesa and card payments",
+      "Dashboard with invoicing and analytics",
+      "60 days of support",
+    ],
+    delivery: "5–8 weeks",
+    liveNames: [{ name: "Richworld Safaris", href: "https://www.richworldsafaris.com/" }, { name: "Maka Grace Travel", href: "https://www.makagracetravel.co.ke/" }, { name: "Weezdom Utilities", href: "#work" }],
+    buttonText: "Get a quote",
+    buttonStyle: "secondary",
+    popular: false,
+  },
+];
+
+const pricingCustomPlatformBar = {
+  title: "Custom Platforms",
+  text: "Web apps, portals and platforms like LigiOpen and WOW Reloaded. Quoted after a discovery call.",
+  price: "Let's talk",
+  buttonText: "Book a discovery call",
+};
+
+const pricingQAIntro =
+  "I test websites and apps before they reach your customers, and I can fix what I find.";
+
+const pricingQAPackages = [
+  {
+    name: "Website QA Audit",
+    tagline: "Existing sites that feel buggy, slow or broken on mobile",
+    price: "20,000",
+    period: "",
+    hasFrom: true,
+    included: [
+      "Functionality, forms and links checked",
+      "Mobile and cross-browser testing",
+      "Speed and basic accessibility review",
+      "Prioritised bug report with screenshots",
+    ],
+    delivery: "3–5 days",
+    liveText: null,
+    buttonText: "Request an audit",
+    buttonStyle: "secondary",
+    popular: false,
+  },
+  {
+    name: "Pre-launch QA",
+    tagline: "Apps and sites about to go live",
+    price: "45,000",
+    period: "",
+    hasFrom: true,
+    included: [
+      "Written test plan",
+      "Test execution and bug tracking",
+      "Retesting after fixes",
+      "Sign-off report before launch",
+    ],
+    delivery: "Scoped per project",
+    liveText: "WOW Reloaded (test plans and documented results)",
+    buttonText: "Get a quote",
+    buttonStyle: "primary",
+    popular: true,
+  },
+  {
+    name: "QA by the Day",
+    tagline: "Teams that need a tester during a sprint or release",
+    price: "10,000",
+    period: "/ day",
+    hasFrom: false,
+    included: [
+      "Test plans and execution",
+      "Bug reports in your tracker",
+      "Daily progress updates",
+    ],
+    delivery: "Booked by the day",
+    liveText: null,
+    buttonText: "Book days",
+    buttonStyle: "secondary",
+    popular: false,
+  },
+];
+
+const pricingAuditFixBar = {
+  title: "Audit + Fix",
+  text: "Don't just get a list of bugs. I find them and fix them, quoted as one package.",
+  price: "Quoted together",
+  buttonText: "Get a quote",
+};
+
+const pricingCarePlan = {
+  name: "Care Plan",
+  tagline: "Keep your site fast, secure and up to date after launch.",
+  price: "7,500",
+  period: "/ month",
+  hasFrom: true,
+  included: [
+    "Software and plugin updates",
+    "Regular backups",
+    "Uptime and security monitoring",
+    "Small edits, up to 2 hours per month",
+  ],
+  buttonText: "Start a care plan",
+  buttonStyle: "primary",
+};
+
+const pricingAddOns = [
+  { name: "Extra page", price: "KES 5,000" },
+  { name: "Second language", price: "from KES 15,000" },
+  { name: "Website migration", price: "from KES 20,000" },
+  { name: "Extra revision round", price: "KES 5,000" },
+  { name: "Content writing", price: "Quoted separately" },
+];
+
+const pricingFooterNote =
+  "50% deposit to start · 30% at preview · 20% on launch · Domain and hosting billed at cost.";
+
 const socialImgs = [
   {
     name: "linkedin",
@@ -270,4 +441,14 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  whatsappNumber,
+  pricingTabs,
+  pricingWebsitePackages,
+  pricingCustomPlatformBar,
+  pricingQAIntro,
+  pricingQAPackages,
+  pricingAuditFixBar,
+  pricingCarePlan,
+  pricingAddOns,
+  pricingFooterNote,
 };

@@ -5,6 +5,7 @@ import { navLinks } from "../constants";
 const NavBar = () => {
   // track if the user has scrolled down the page
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     // create an event listener for when the user scrolls
@@ -21,6 +22,8 @@ const NavBar = () => {
     // cleanup the event listener when the component is unmounted
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const closeMobileMenu = () => setMobileOpen(false);
 
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
@@ -42,12 +45,43 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact me</span>
-          </div>
-        </a>
+        <div className="flex items-center gap-3">
+          <a href="#contact" className="contact-btn group">
+            <div className="inner">
+              <span>Contact me</span>
+            </div>
+          </a>
+
+          <button
+            type="button"
+            className="mobile-menu-btn"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((prev) => !prev)}
+          >
+            <span className={mobileOpen ? "translate-y-2 rotate-45" : ""} />
+            <span className={mobileOpen ? "opacity-0" : ""} />
+            <span className={mobileOpen ? "-translate-y-2 -rotate-45" : ""} />
+          </button>
+        </div>
       </div>
+
+      <nav className={`mobile ${mobileOpen ? "open" : ""}`}>
+        <ul>
+          {navLinks.map(({ link, name }) => (
+            <li key={name}>
+              <a href={link} onClick={closeMobileMenu}>
+                {name}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href="#contact" onClick={closeMobileMenu}>
+              Contact me
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
