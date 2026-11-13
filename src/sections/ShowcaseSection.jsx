@@ -47,11 +47,27 @@ const projects = [
     span: "col-span-1 md:col-span-2 xl:col-span-2 row-span-1",
   },
   {
+    title: "EveryVisitor",
+    desc: "Accessibility monitoring SaaS with agency dashboards, client portals and monthly compliance reports.",
+    imgPath: "/images/everyvisitor.webp",
+    bg: "bg-[#2E46C8]",
+    imageClass: "object-contain p-2 md:p-4 drop-shadow-xl",
+    span: "col-span-1 md:col-span-2 xl:col-span-2 row-span-1 xl:row-span-2",
+  },
+  {
     title: "Richworld Safaris",
     desc: "Bespoke booking engine for a premier travel company.",
     imgPath: "/images/project_dashboard.png",
     bg: "bg-[#FFF3E0]",
     imageClass: "object-cover",
+    span: "col-span-1 md:col-span-1 xl:col-span-1 row-span-1",
+  },
+  {
+    title: "54 Law Partners",
+    desc: "Bilingual (EN/FR) website for a pan-African law firm, with practice areas, people and insights.",
+    imgPath: "/images/54lawpartners.webp",
+    bg: "bg-[#5FC99A]",
+    imageClass: "object-cover object-left",
     span: "col-span-1 md:col-span-1 xl:col-span-1 row-span-1",
   }
 ];

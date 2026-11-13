@@ -268,7 +268,7 @@ const pricingWebsitePackages = [
     name: "Starter Website",
     tagline:
       "Small businesses and organisations that need a clean online presence",
-    price: "50,000",
+    price: "75,000",
     period: "",
     hasFrom: true,
     included: [
@@ -285,7 +285,7 @@ const pricingWebsitePackages = [
   {
     name: "Business Website",
     tagline: "Firms that want a premium site they can update themselves",
-    price: "90,000",
+    price: "130,000",
     period: "",
     hasFrom: true,
     included: [
@@ -304,7 +304,7 @@ const pricingWebsitePackages = [
   {
     name: "Booking & E-commerce",
     tagline: "Businesses that sell or take bookings online",
-    price: "180,000",
+    price: "200,000",
     period: "",
     hasFrom: true,
     included: [
